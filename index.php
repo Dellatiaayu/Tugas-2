@@ -51,8 +51,8 @@ $index = 1;
                         <td><?= $data->status ?> </td>
                         
                         <td>
-                            <a name="edit" id="edit" href="edit.php?nim=<? $data->nim ?>">Edit</a>
-                            <a name="hapus" id="hapus" href="proces.php?nim=<? $data->nim ?>">Delete</a>
+                            <a name="edit" id="edit" href="edit.php?nim=<?= $data->nim ?>">Edit</a>
+                            <a name="hapus" id="hapus" href="proces.php?nim=<?= $data->nim ?>" onclick="return confirm('apakah anda yakin ? ')">Delete</a>
                             
                         </td>
                     </tr>
