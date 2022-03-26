@@ -1,7 +1,7 @@
 <?php
 
 include 'model.php';
-$model = new model()
+$model = new model();
 $index = 1;
 
 ?>
@@ -31,6 +31,7 @@ $index = 1;
                     <th>Jumlah Beli</th>
                     <th>Diskon</th>
                     <th>Total</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             
@@ -52,7 +53,7 @@ $index = 1;
                         <td>
                         <td><?= $data->total ?> </td>
                         <td>
-                            <a name="edit" id="edit" href="edit.php?id_skincare=<? $data->nim ?>">Edit</a>
+                            <a name="edit" id="edit" href="edit.php?id_skincare=<? $data->id_skincare ?>">Edit</a>
                             <a name="hapus" id="hapus" href="proces.php?id_skincare=<? $data->id_skincare ?>">Delete</a>
                             
                         </td>

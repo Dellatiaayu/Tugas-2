@@ -22,6 +22,7 @@ if (isset($_POST['submit_edit'])) {
 }
 if (isset($_GET['id_skincare'])) {
     $id = $_GET['id_skincare'];
+    $model = new model();
     $model->delete($id);
     header('location:index.php');
 }

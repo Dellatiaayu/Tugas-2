@@ -6,7 +6,7 @@ class Connection {
         $database = "db_skincare";
         $username = "root";
         $password = "";
-        $connect = new msqli($host, $database, $username, $password);
+        $connect = new mysqli($host, $username, $password, $database);
         return $connect;
     }
 }

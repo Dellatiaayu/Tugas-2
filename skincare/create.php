@@ -30,14 +30,6 @@
         <label>Jumlah Beli</label>
         <br>
         <input type="number" name="jml_beli">
-        <br>
-        <label>Diskon</label>
-        <br>
-        <input type="number" name="diskon">
-        <br>
-        <label>Total</label>
-        <br>
-        <input type="number" name="total">
         <br><br>
         <button type="submit" name="submit_simpan">Submit</button>
         <button type="reset">Reset </button>

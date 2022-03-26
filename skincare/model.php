@@ -5,14 +5,27 @@ class model extends connection {
         $this->conn = $this->get_connection();
     }
     public function insert($id_skincare, $nm_skincare, $harga, $pembeli, $jml_beli){
-        $diskon = $this->diskon($jml_beli)
-        $total = $this->total($harga, $jml_beli, $diskon);
-        $sql = "INSERT INTO tbl_penjualan (id_skincare, nm_skincare, harga, pembeli, jml_beli, diskon, total) VALUES ('$id_skincare', '$nm_skincare', '$harga', '$pembeli', '$jml_beli', '$diskon', '$total')";
+        $total = $this->total($jml_beli, $harga);
+        $diskon = $this->diskon($diskon, $total, $jml_beli);
+        $sql = "INSERT INTO tbl_penjualan (id_skincare, nm_skincare, harga, pembeli, jml_beli, diskon, total) VALUES ('$id_skincare', '$nm_skincare', '$harga', '$pembeli', '$jml_beli', '$diskon', '$tot')";
         $this->conn->query($sql);
     }
-    public function na($harga, $jml_beli, $diskon){
-        $total = (0.3 * $uts) + (0.3 * $tugas) + (0.4 * $uas);
-        return $diskon;
+    public function total($harga, $jml_beli){
+        $total = $jml_beli * $harga;
+        return $total;
+    }
+    public function diskon($diskon, $total, $jml_beli){
+        $diskon = 0;
+        if ($jml_beli >=15){
+            $diskon = $total * 0.15;
+        } else if($jml_beli >=10){
+            $diskon = $total * 0.10;
+        }else if ($jml_beli >=5){
+            $diskon = $total * 0.05;
+        }else {
+            $diskon = $total * 0;
+        }
+        $tot = $total - $diskon;
     }
     public function tampil_data(){
         $sql = "SELECT *FROM tbl_penjualan";
