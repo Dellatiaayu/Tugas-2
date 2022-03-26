@@ -29,15 +29,15 @@ $data = $model->edit($id);
         <br>
         <label>UTS</label>
         <br>
-        <input type="text" name="uts" value="<?php echo $data->uts ?>">
+        <input type="number" name="uts" value="<?php echo $data->uts ?>">
         <br>
         <label>Tugas</label>
         <br>
-        <input type="text" name="tugas" value="<?php echo $data->tugas ?>">
+        <input type="number" name="tugas" value="<?php echo $data->tugas ?>">
         <br>
         <label>UAS</label>
         <br>
-        <input type="text" name="uas" value="<?php echo $data->uas ?>">
+        <input type="number" name="uas" value="<?php echo $data->uas ?>">
         <br><br>
         
         <button type="submit" name="submit_edit">Submit</button>

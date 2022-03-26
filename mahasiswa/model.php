@@ -44,7 +44,7 @@ class model extends connection {
     public function update($nim, $nama, $uts, $tugas, $uas){
         $na = $this->na($uts, $tugas, $uas);
         $status = $this->status($na);
-        $sql = "UPDATE tbl_nilai SET nama='$nama', uts='$uts', uas='$uas', tugas='tugas', na='$na', status='$status' WHERE nim='$nim'";
+        $sql = "UPDATE tbl_nilai SET nama='$nama', uts='$uts', uas='$uas', tugas='$tugas', na='$na', status='$status' WHERE nim='$nim'";
         $this->conn->query($sql);
     }
     public function delete($nim){

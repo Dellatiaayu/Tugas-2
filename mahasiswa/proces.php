@@ -26,4 +26,3 @@ if (isset($_GET['nim'])) {
     $model->delete($id);
     header('location:index.php');
 }
-?>
