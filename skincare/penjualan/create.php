@@ -10,7 +10,7 @@
     <h1>Tambah</h1>
     <a href="index.php">Kembali</a>
     <br><br>
-    <form action="proces.php" method="post">
+    <form action="proces_data.php" method="post">
         <label>ID Skincare</label>
         <br>
         <input type="text" name="id_skincare">

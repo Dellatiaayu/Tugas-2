@@ -16,10 +16,10 @@ $index = 1;
 <body>
     <div>
         <h1>Data Penjualan Skincare</h1>
-        <a href="create.php">Tambah data Penjualan</a>
-        <br>
+        <a href="create.php">Tambah Data Penjualan</a>
+        <br><br>
         <a href="print.php" target="_blank">Cetak Data Penjualan Skincare</a>
-        <br>
+        <br><br>
         <table border="1">
             <thead>
                 <tr>
@@ -37,7 +37,7 @@ $index = 1;
             
             <tbody>
                 <?php
-                $result = $model->tampil_data();
+                $result = $model->tampil_data_penjualan();
                 if (empty($result)) {
                 foreach ($result as $data) : ?>
                     <tr>
@@ -54,7 +54,7 @@ $index = 1;
                         <td><?= $data->total ?> </td>
                         <td>
                             <a name="edit" id="edit" href="edit.php?id_skincare=<? $data->id_skincare ?>">Edit</a>
-                            <a name="hapus" id="hapus" href="proces.php?id_skincare=<? $data->id_skincare ?>">Delete</a>
+                            <a name="hapus" id="hapus" href="proces_data.php?id_skincare=<? $data->id_skincare ?>">Delete</a>
                             
                         </td>
                     </tr>

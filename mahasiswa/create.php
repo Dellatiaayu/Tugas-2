@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <h1>Tambah</h1>p
+    <h1>Tambah</h1>
     <a href="index.php">Kembali</a>
     <br><br>
     <form action="proces.php" method="post">

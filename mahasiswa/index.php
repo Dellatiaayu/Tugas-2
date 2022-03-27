@@ -16,7 +16,7 @@ $index = 1;
 <body>
     <div>
         <h1>Data Nilai Mahasiswa</h1>
-        <a href="create.php">Tambah data</a>
+        <a href="create.php">Tambah Data</a>
         <br><br>
         <a href="print.php" target="_blank">Cetak Data</a>
         <br><br>

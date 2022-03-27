@@ -53,7 +53,7 @@ $index = 1;
                 <?php
                 $result = $model->tampil_data();
                 if (!empty($result)) {
-                    foreach ($result qs $data) : ?>
+                    foreach ($result as $data) : ?>
                     <tr>
                         <td><?= $index++ ?></td>
                         <td><?= $data->id_skincare ?></td>
