@@ -1,7 +1,7 @@
 <?php
 
 include 'model.php';
-$model = new model();
+$model = new Model();
 $index = 1;
 
 ?>
@@ -38,7 +38,7 @@ $index = 1;
             <tbody>
                 <?php
                 $result = $model->tampil_data_penjualan();
-                if (empty($result)) {
+                if (!empty($result)) {
                 foreach ($result as $data) : ?>
                     <tr>
                         <td><?= $index++ ?></td>
@@ -46,15 +46,12 @@ $index = 1;
                         <td><?= $data->nm_skincare ?> </td>
                         <td><?= $data->harga ?> </td>
                         <td><?= $data->pembeli ?> </td>
-                        <td>
                         <td><?= $data->jml_beli ?> </td>
-                        <td>
                         <td><?= $data->diskon ?> </td>
-                        <td>
                         <td><?= $data->total ?> </td>
                         <td>
-                            <a name="edit" id="edit" href="edit.php?id_skincare=<? $data->id_skincare ?>">Edit</a>
-                            <a name="hapus" id="hapus" href="proces_data.php?id_skincare=<? $data->id_skincare ?>">Delete</a>
+                            <a name="edit" id="edit" href="edit.php?id_skincare=<?= $data->id_skincare ?>">Edit</a>
+                            <a name="hapus" id="hapus" href="proces_data.php?id_skincare=<?= $data->id_skincare ?>">Delete</a>
                             
                         </td>
                     </tr>

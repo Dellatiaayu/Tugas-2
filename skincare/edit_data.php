@@ -1,7 +1,7 @@
 <?php
 
 $id = $_GET['id_skincare'];
-include 'model.php';
+include 'model_data.php';
 $model = new Model();
 $data = $model->edit($id);
 
@@ -11,11 +11,11 @@ $data = $model->edit($id);
 <html lang="en">
 
 <head>
-    <title>Edit Data Penjualan Skincare</title>
+    <title>Edit Data Skincare</title>
 </head>
 
 <body>
-    <h1>Edit Data Penjualan Skincare</h1>
+    <h1>Edit Data Skincare</h1>
     <a href="index.php">Kembali</a>
     <br><br>
     <form action="proces_data.php" method="post">
@@ -31,13 +31,9 @@ $data = $model->edit($id);
         <br>
         <input type="text" name="harga" value="<?php echo $data->harga ?>">
         <br>
-        <label>Pembeli</label>
+        <label>Stok</label>
         <br>
-        <input type="text" name="pembeli" value="<?php echo $data->pembeli ?>">
-        <br>
-        <label>Jumlah Beli</label>
-        <br>
-        <input type="text" name="jml_beli" value="<?php echo $data->jml_beli ?>">
+        <input type="number" name="stok" value="<?php echo $data->stok ?>">
         <br><br>
         
         <button type="submit" name="submit_edit">Submit</button>

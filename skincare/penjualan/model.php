@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-class model extends connection {
+class Model extends connection {
     public function __construct(){
         $this->conn = $this->get_connection();
     }

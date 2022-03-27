@@ -1,7 +1,7 @@
 <?php
 
 include 'model.php';
-$model = new model();
+$model = new Model();
 $index = 1;
 
 ?>
@@ -51,7 +51,7 @@ $index = 1;
             </thead>
             <tbody>
                 <?php
-                $result = $model->tampil_data();
+                $result = $model->tampil_data_penjualan();
                 if (!empty($result)) {
                     foreach ($result as $data) : ?>
                     <tr>
